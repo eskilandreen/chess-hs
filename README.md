@@ -1,0 +1,2 @@
+Chess in Haskell
+================
