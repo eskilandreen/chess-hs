@@ -42,7 +42,7 @@ newBoard = V.fromList $ reverse $ map readPiece asciiBoard
       , "E  E  E  E  E  E  E  E "
       , "E  E  E  E  E  E  E  E "
       , "LP LP LP LP LP LP LP LP"
-      , "LR LN LB LQ LK LB LN LR"
+      , "LR LN LB LK LQ LB LN LR"
       ]
 
 
@@ -66,7 +66,7 @@ sqToIdx (Sq x y) = y * 8 + x
 
 sqColor :: Sq -> Color
 sqColor (Sq x y)
-  | evenX == evenY  = L
+  | evenX /= evenY  = L
   | otherwise       = D
   where
     evenX = x `mod` 2 == 0
