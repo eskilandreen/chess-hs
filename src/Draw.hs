@@ -120,8 +120,8 @@ posForSq sq = (x', y')
 posToSq :: (Float, Float) -> Maybe Sq
 posToSq (x, y) = mkSq (x', y')
   where
-    x' = round $ (y + windowCenterY - (tileHeightF / 2)) / tileHeightF
-    y' = round $ (x + windowCenterX - (tileWidthF / 2)) / tileWidthF
+    x' = round $ (x + windowCenterX - (tileWidthF / 2)) / tileWidthF
+    y' = round $ (y + windowCenterY - (tileHeightF / 2)) / tileHeightF
 
 
 
